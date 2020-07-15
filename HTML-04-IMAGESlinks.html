@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style> 
+            html {
+              background-color: whitesmoke;
+            }
+            p {
+                color:navy; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+                ;
+            }
+             
+            a:link, a:visited {
+              background-color: navy;
+              color: white;
+              padding: 14px 25px;
+              text-align: center; 
+              text-decoration: none;
+              display: inline-block;
+                      }
+            a:hover, a:active {
+              background-color: black;
+            } 
+            html, body {
+          margin: 0;
+          padding: 0;
+            font-size: 18px;
+          }
+          
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: blue ;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+          }
+          
+          li {
+            float: left;
+          }
+          
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+          li a:hover {
+            background-color: lightblue;
+          }
+          
+          .active {
+            background-color: navy;
+          }
+            </style>
+    <title>HTML Links</title>
+</head>
+<body>
+  <ul>
+    <li><a class="active" target="_blank" href="#home">H</a></li>
+    <li><a target="_parent" href="#">T</a></li>
+    <li><a target="_self"  href="#robots">M</a></li>
+    <li><a target="_top" href="../">L</a></li>
+  </ul>
+        <a name="links"></a>
+                <p>        email link: </p>
+                <a href="mailto:someone@example.com?Subject=Hola%20nuevamente" target="_top">enviar correo</a>
+        
+        <p> Telefono</p>
+        <a href="tel:+4733378901">LLAMAR</a>
+        <p> Para JS </p>
+        <a href="javascript:alert('Hola');">Ejecutar JavaScript</a> <br> <br>
+        <a href="sms:+34695685920">Envíame un SMS</a> <br> <br>
+        <a href="https://api.whatsapp.com/send?phone=525517284062&text=Soy,%20un%20alien%20:)">Whatsapp</a><br> <br>
+        <a target="_blank" href="https://duckduckgo.com/"> ir a </a> <br> <br>
+        <p> Chapter 1 #ID </p> <br>
+        <a href="../image/CSS-01.htm#c1">Chapter 1 </a> <br>   <br>       
+        <svg height="30" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a link:href="https://www.w3schools.com/graphics/" target="_blank">
+        <text x="10" y="15" fill="red">Link Texto SVG!</text>
+        </svg> <br>
+        <a href="archivo.zip">Descarga archivo</a>
+        <a href="../"> Directorio </a> 
+        <a href="/"> explorar </a> <br>
+        <link >
+
+        <ol>Atributos</ol> 
+        <li> _blank Load in a new window </li> 
+        <li> _self Load in the same frame as it was clicked </li>
+        <li> _parent Load in the parent frameset </li>  
+        <li> _top Load in the full body of the window </li>
+        <li> framename Load in a named frame  </li>
+                 
+        <a href="#top">Go to top</a>
+     <pre>
+      
+      Enlace y ancla
+      Para crear un enlace de este tipo es necesario dos componentes, que para aclararnos los vamos a nombrar de la siguiente forma:
+      
+      El enlace: Sería el link, lo que aparecerá en la página para que el usuario haga clic. Sería el enlace de origen propiamente dicho.
+      El ancla: Además se requiere una marca, para saber dónde se dirige el enlace. Es el destino donde nos llevará el navegador al pulsar el link. Le llamamos ancla porque nos permite anclar a esa posición otros enlaces.
+      Ambos elementos se crean con la misma etiqueta A, tanto el enlace como el ancla. Solo que usaremos distintos atributos dentro de esa etiqueta.
+      
+      Sintaxis de los enlaces en la misma página 
+      1 Lo primero será colocar nuestro enlace origen. Este enlace de origen es el que el usuario podrá hacer clic.
+      
+      <code>  <a href="#links">Ir a</a>  </code>
+      Como podéis ver, el contenido del enlace es el texto "Ir abajo" y el destino, #abajo, es un punto de la misma página que todavía no hemos definido. Ojo al símbolo "#": es él quien especifica al navegador que el enlace apunta a una sección en particular, a un punto interno dentro de la misma página.
+      
+      En segundo lugar, hay que generar un enlace en el destino, al que hemos llamado "ancla". Este enlace no llevará contenido, puesto que no queremos que nadie lo pulse, sino que nos sirva de ancla. Tampoco llevará el atributo "href", porque no tiene que apuntar a ningún lugar, sino que le apuntarán a él. Para poder distinguirlo de otros posibles enlaces realizados dentro de la misma página a cada ancla se le asigna un nombre por medio del atributo "name". En este caso, la etiqueta que escribiremos será ésta:
+      
+      <a name="nombre"></a>
+      Para entender cómo crear los enlaces internos nos tenemos que fijar en el name="nombre" del ancla. Pues bien, si queremos crear un enlace interno a esta ancla, colocaremos en en enlace de origen el href="#abajo", o sea, el nombre del enlace más un "#" para que el navegador sepa que es un enlace interno.
+     </pre>
+    
+      <ol>
+       <li>Este atributo sólo funciona para las <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">políticas de mismo origen (same-origin URLs)</a>.</li>
+       <li>Este atributo puede ser utilizado con <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL"><code>blob:</code> URLs</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a> para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.</li>
+       <li>Si el encabezado (<em>header</em>) HTTP <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition:</code></a> proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.</li>
+       <li>Si <code>Content-Disposition:</code> está ajustado a <code>inline</code>, Firefox prioriza <code>Content-Disposition</code>, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo <code>download</code>.</li>
+      </ol>
+     
+     
+        <p><strong>Nota:</strong> Puede ser utilizado <code>href="#top"</code> o un fragmento vacío <code>href="#"</code> para enlazar a la parte superior de la página actual. <a rel="noopener" href="https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid" class="external">Este comportamiento está especficado en HTML5</a>.</p>
+      
+     </body>
+     </html> 
+     
+</body>
+</html>
